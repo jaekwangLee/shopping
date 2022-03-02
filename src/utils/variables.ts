@@ -1,0 +1,1 @@
+export const REQUESTL_BASE_URL = process.env.NEXT_PUBLIC_DEV === 'true' ? 'http://localhost:9030/web' : 'https://api.tipbox.wiki/web';
