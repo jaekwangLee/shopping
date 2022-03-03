@@ -1,2 +1,7 @@
 node_modules
 .env
+scripts/sitemap*
+scripts/sitemap-common.js
+scripts/sitemap-post.js
+scripts/sitemap=zip.js
+scripts/sitemap.js

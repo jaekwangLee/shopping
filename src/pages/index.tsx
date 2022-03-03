@@ -7,13 +7,15 @@ import "slick-carousel/slick/slick-theme.css";
 import PageContainer from '@components/layout/Container';
 import { PageWrapper } from '@components/common/Container';
 import { PageHeader, HeaderCategory } from '@containers/Header';
+import { AllEvents, AllList } from '@containers/AllList.tsx';
 
 function MainPage(props: any) {
     return (
         <PageWrapper>
             <PageHeader type='default' />
             <HeaderCategory />
-            <h2>메인 페이지</h2>
+            <AllEvents />
+            <AllList />
         </PageWrapper>
     );
 }

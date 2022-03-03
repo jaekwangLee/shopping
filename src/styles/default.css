@@ -1,14 +1,14 @@
 html,
 body {
-    padding: 0px;
-    margin: 0px;
-    background-color: #ffffff !important;
+  padding: 0px;
+  margin: 0px;
+  background-color: #ffffff !important;
 }
 
 table,
 td {
-    border: 1.5px solid #f3f3f3;
-    vertical-align: baseline;
+  border: 1.5px solid #f3f3f3;
+  vertical-align: baseline;
 }
 
 /* tr {
@@ -16,115 +16,132 @@ td {
 } */
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-input[type='number'] {
-    -moz-appearance: textfield; /* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
 }
 
 .ant-select-selection__choice {
-    display: none;
+  display: none;
 }
 
 .ant-radio-button-wrapper {
-    display: none;
+  display: none;
 }
 
 /* calendar */
 .ant-picker-cell {
-    padding: 3px 0px 22px;
+  padding: 3px 0px 22px;
 }
 
 .ant-picker-calendar-header {
-    padding: 12px 0px 12px;
-    justify-content: flex-start;
-    z-index: 10;
+  padding: 12px 0px 12px;
+  justify-content: flex-start;
+  z-index: 10;
 }
 
 .ant-picker-calendar-mini .ant-picker-calendar-header {
-    padding-left: 0px;
+  padding-left: 0px;
 }
 
 .ant-picker-calendar-full .ant-picker-panel .ant-picker-calendar-date-content {
-    height: 64px;
+  height: 64px;
 }
 
 .ant-badge-status {
-    line-height: normal;
+  line-height: normal;
 }
 
 .ant-picker-calendar-date-content .events {
-    padding-left: 0px;
+  padding-left: 0px;
 }
 
 .ant-picker-calendar-date-content .events .ant-badge-status-text {
-    font-size: 11px;
-    line-height: 14px;
-    margin-left: 4px;
+  font-size: 11px;
+  line-height: 14px;
+  margin-left: 4px;
 }
 
 /* time-picker */
 .ant-picker-content {
-    width: 200px;
+  width: 200px;
 }
 
 .ant-picker-time-panel-column {
-    width: 100px;
+  width: 100px;
 }
 
 .ant-picker-time-panel-cell {
-    text-align: center;
+  text-align: center;
 }
 
 .ant-picker-time-panel-cell-inner {
-    padding-left: 0px !important;
+  padding-left: 0px !important;
 }
 
 /* modal */
 .ReactModal__Overlay--after-open {
-    overflow-y: scroll;
-    z-index: 10;
+  overflow-y: scroll;
+  z-index: 10;
+}
+
+/* slick */
+.slick-slider {
+  height: 100%;
+}
+
+.slick-slider .slick-list {
+  height: 100%;
+}
+
+.slick-slider .slick-list .slick-track {
+  height: 100%;
+}
+
+ul.slick-dots {
+  bottom: 0px;
 }
 
 @media (max-width: 768px) {
-    h2 {
-        font-size: 18px;
-    }
-    .ant-table-cell {
-        padding: 10px !important;
-        min-width: 140px;
-    }
+  h2 {
+    font-size: 18px;
+  }
+  .ant-table-cell {
+    padding: 10px !important;
+    min-width: 140px;
+  }
 
-    .ant-table-cell {
-        font-size: 11px;
-    }
+  .ant-table-cell {
+    font-size: 11px;
+  }
 
-    .ant-table-cell > span {
-        font-size: 11px;
-    }
+  .ant-table-cell > span {
+    font-size: 11px;
+  }
 
-    .ant-table-wrapper {
-        width: 100%;
-    }
+  .ant-table-wrapper {
+    width: 100%;
+  }
 
-    .ant-table-content {
-        width: 100%;
-        overflow-y: scroll;
-    }
+  .ant-table-content {
+    width: 100%;
+    overflow-y: scroll;
+  }
 }
 
 @media (max-width: 480px) {
-    h2 {
-        font-size: 16px;
-    }
+  h2 {
+    font-size: 16px;
+  }
 
-    .ant-table-cell {
-        padding: 8px !important;
-    }
+  .ant-table-cell {
+    padding: 8px !important;
+  }
 }

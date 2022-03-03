@@ -5,6 +5,7 @@ import actionTypes from './types';
 const initialState = {
     page: 0,
     mainList: [],
+    pageEnd: false,
 }
 
 const mainReducer = createReducer(
@@ -12,6 +13,9 @@ const mainReducer = createReducer(
     {
         [actionTypes.SET_MAIN_LIST_PAGE]: produce((draft, { payload }) => {
             draft['page'] = payload;
+        }),
+        [actionTypes.SET_MAIN_LIST_PAGE]: produce((draft, { payload }) => {
+            draft['pageEnd'] = true;
         }),
         [actionTypes.ADD_LIST]: produce((draft, { payload }) => {
             if (payload && Array.isArray(payload) && payload.length > 0) {

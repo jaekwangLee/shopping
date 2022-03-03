@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { ProductModel } from '@apis/product';
 import { RootState } from '@reducer/index';
-import { addItemList, setPageNumber } from '@reducer/main/actions';
+import { addItemList, setPageEnd, setPageNumber } from '@reducer/main/actions';
 
 export function useItemListState() {
     const state = useSelector((state: RootState) => state.main);
@@ -14,6 +14,8 @@ export function useItemListState() {
         if (status === 'success' && data &&  data.length > 0) {
             dispatch(setPageNumber(state.page + 1));
             dispatch(addItemList(data));
+        } else {
+            dispatch(setPageEnd())
         }
     }, [state.page]);
 
