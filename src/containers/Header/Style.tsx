@@ -17,7 +17,7 @@ export const PageHeaderContainer = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 
     height: 60px;
     padding-left: 12px;
@@ -29,6 +29,10 @@ export const PageHeaderContainer = styled.div`
 `;
 
 export const CategoryContainer = styled(PageHeaderContainer)`
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    background-color: #ffffff;
     height: 44px;
 
     @media (max-width: 640px) {
@@ -48,7 +52,11 @@ export const CategoryTxt = styled.span`
     cursor: pointer;
 
     margin-bottom: 0px;
-    border-bottom: ${({ active }: { active?: boolean; }) => active ? '1.5px solid green' : 0};
+    border-bottom: ${({ active }: { active?: boolean; }) => active ? '2px solid green' : 0};
+
+    > a:hover {
+        color: rgba(0,0,0,0.85);
+    }
 
     @media (max-width: 640px) {
         line-height: 40px;

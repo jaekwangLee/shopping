@@ -55,8 +55,7 @@
     "**/**/*.tsx",
     "**/**/**/*.ts",
     "**/**/**/*.tsx",
-    "server.js"
-  ],
+    "server.js"],
   "exclude": [
     "node_modules",
     "babel.config.js"

@@ -10,7 +10,6 @@ export const PageWrapper = styled.div`
     position: relative;
     width: 100%;
     max-width: 640px;
-    height: 100vh;
     margin: 0 auto;
 `;
 

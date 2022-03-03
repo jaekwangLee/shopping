@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import PageContainer from '@components/layout/Container';
 import { PageWrapper } from '@components/common/Container';
 import { PageHeader, HeaderCategory } from '@containers/Header';
-import { AllEvents, AllList } from '@containers/AllList.tsx';
+import { AllEvents, AllList } from '@containers/AllList';
 
 function MainPage(props: any) {
     return (

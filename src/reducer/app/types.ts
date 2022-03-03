@@ -1,6 +1,5 @@
-
 const actionTypes = {
-    OPEN_MEET_MODAL: 'app/OPEN_MEET_MODAL',
+    SET_PRODUCT_INFO: 'app/SET_PRODUCT_INFO',
 }
 
 export default actionTypes;

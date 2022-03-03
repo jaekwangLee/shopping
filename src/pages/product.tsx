@@ -3,11 +3,15 @@ import { NextPageContext } from 'next';
 
 import PageContainer from '@components/layout/Container';
 import { PageWrapper } from '@components/common/Container';
+import { PageHeader, HashHeader } from '@containers/Header';
+import { ProductInformation } from '@containers/Product';
 
 function ShowProductPage(props: any) {
     return (
         <PageWrapper>
-            <h2>상품 상세</h2>
+            <PageHeader type='product' />
+            <HashHeader />
+            <ProductInformation />
         </PageWrapper>
     );
 }

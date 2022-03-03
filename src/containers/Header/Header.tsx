@@ -1,12 +1,12 @@
 import React, { useCallback } from 'react';
-import { SearchOutlined, UserOutlined, ShoppingCartOutlined } from '@ant-design/icons'
+import { SearchOutlined, UserOutlined, ShoppingCartOutlined, HomeOutlined, ArrowLeftOutlined } from '@ant-design/icons'
 import { useRouter } from 'next/router';
 
 import { FlexOne } from '@components/common/Container';
 import { Txt16 } from '@components/common/Text';
 import { Icon, PageHeaderContainer } from './Style';
 
-const DefaultPageHeaderController = ({ type }: { type: 'default'; }) => {
+const DefaultPageHeaderController = ({ type }: { type: 'default' | 'product'; }) => {
     const route = useRouter();
 
     const goHome = useCallback(() => {
@@ -17,11 +17,23 @@ const DefaultPageHeaderController = ({ type }: { type: 'default'; }) => {
         route.push('/cart');
     } ,[])
 
+    const goBack = useCallback(() => {
+        route.back();
+    }, [])
+
     if (!type || type === 'default') {
         return (
             <DefaultPageHeader
                 goHome={goHome} 
                 goCart={goCart}
+            />
+        )
+    } else if (type === 'product') {
+        return (
+            <ProductPageHeader 
+                goHome={goHome} 
+                goCart={goCart}
+                goBack={goBack}
             />
         )
     }
@@ -40,5 +52,19 @@ const DefaultPageHeader = ({ goHome, goCart }: { goHome: () => void; goCart: () 
             <Icon IconComponent={ShoppingCartOutlined} onClick={goCart} />
         </>
     </PageHeaderContainer>
-)
+);
+
+const ProductPageHeader = ({ goHome, goCart, goBack }: { goHome: () => void; goCart: () => void; goBack: () => void; }) => (
+    <PageHeaderContainer>
+        <Icon IconComponent={ArrowLeftOutlined} onClick={goBack} />
+        <FlexOne>
+            <Txt16><b>상품 정보</b></Txt16>
+        </FlexOne>
+        <>
+            <Icon IconComponent={HomeOutlined} onClick={goHome} style={{ marginRight: '8px' }} />
+            <Icon IconComponent={ShoppingCartOutlined} onClick={goCart} />
+        </>
+    </PageHeaderContainer>
+);
+
 export default DefaultPageHeaderController
